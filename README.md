@@ -48,7 +48,7 @@ The list of arguments and their brief descriptions:\
 --exp: experiment name\
 -m, --margin: $\gamma$\
 -lr, --learning_rate: learning rate. Ex. 1e-3\
--nle, --num_layer_ent: $\hat{L}$\
+-nle, --num_layer_ent: $\widehat{L}$\
 -nlr, --num_layer_rel: $L$\
 -d_e, --dimension_entity: $\hat{d}$ \
 -d_r, --dimension_relation: $d$\
