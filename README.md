@@ -6,6 +6,8 @@ Codes written by Jaejun Lee (jjlee98@kaist.ac.kr).
 
 If you use this code or data, please cite our paper.
 
+The bibtex is provided at the end of this file.
+
 > Jaejun Lee, Chanyoung Chung and Joyce Jiyoung Whang, InGram: Inductive Knowledge Graph Embedding via Relation Graphs, To appear in 40th International Conference on Machine Learning (ICML 2023), 2023.
 
 ## Requirements
@@ -50,15 +52,15 @@ The list of arguments and their brief descriptions:\
 -lr, --learning_rate: learning rate. Ex. 1e-3\
 -nle, --num_layer_ent: $\widehat{L}$\
 -nlr, --num_layer_rel: $L$\
--d_e, --dimension_entity: $\hat{d}$ \
+-d_e, --dimension_entity: $\widehat{d}$ \
 -d_r, --dimension_relation: $d$\
--hdr_e, --hidden_dimension_ratio_entity: $\hat{d'}/\hat{d}$\
+-hdr_e, --hidden_dimension_ratio_entity: $\widehat{d'}/\widehat{d}$\
 -hdr_r, --hidden_dimension_ratio_relation: $d'/d$\
 -b, --num_bin: $B$\
 -e, --num_epoch: number of epochs to run\
 --target_epoch: the epoch to run test on (only used for test.py)\
 -v, --validation_epoch: duration for the validation\
---num_head: $\hat{K}=K$\
+--num_head: $\widehat{K}=K$\
 --num_neg: number of negative triplets per triplet\
 --best: use the provided checkpoints (only used for test.py)\
 --no_write: don't save the checkpoints (only used for train.py)
