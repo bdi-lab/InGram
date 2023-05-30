@@ -6,7 +6,7 @@ Codes written by Jaejun Lee (jjlee98@kaist.ac.kr).
 
 If you use this code or data, please cite our paper.
 
-> Jaejun Lee, Chanyoung Chung and Joyce Jiyoung Whang, InGram: Inductive Knowledge Graph Embedding via Relation Graphs, To appear in Fortieth International Conference on Machine Learning (ICML 2023), 2023.
+> Jaejun Lee, Chanyoung Chung and Joyce Jiyoung Whang, InGram: Inductive Knowledge Graph Embedding via Relation Graphs, To appear in 40th International Conference on Machine Learning (ICML 2023), 2023.
 
 ## Requirements
 
