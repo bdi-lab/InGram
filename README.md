@@ -31,7 +31,7 @@ We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti, and NVIDIA GeForce RTX 309
 
 You can download the checkpoints from https://drive.google.com/file/d/1aZrx2dYNPT7j4TGVBOGqHMdHRwFUBqx5/view?usp=sharing.
 
-The commands to reproduce the results in our paper:
+The command to reproduce the results in our paper:
 
 ```python
 python3 test.py --best --data_name [dataset_name]
