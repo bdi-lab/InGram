@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## Reproducing Results
 
-We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti,and NVIDIA GeForce RTX 3090 for all our experiments.
+We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti, and NVIDIA GeForce RTX 3090 for all our experiments.
 
 We provide the checkpoints we used to produce the inductive link prediction results on 14 datasets.
 
