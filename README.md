@@ -39,11 +39,9 @@ python3 test.py --best --data_name [dataset_name]
 
 ## Training from Scratch
 
-To train InGram from scratch, run `train.py` with arguments.
+To train InGram from scratch, run `train.py` with arguments. Please refer to `my_parser.py` for the examples of the arguments. Please tune the hyperparameters of our model using the range provided in Appendix C of the paper because the best hyperparameters may be different due to randomness.
 
-Please tune the hyperparameters of our model using the range provided in Appendix C of the paper because the best hyperparameters may be different due to randomness.
-
-The list of arguments of `train.py` and their brief descriptions:
+The list of arguments of `train.py`:
 - `--data_name`: name of the dataset
 - `--exp`: experiment name
 - `-m, --margin`: $\gamma$
@@ -62,5 +60,3 @@ The list of arguments of `train.py` and their brief descriptions:
 - `--num_neg`: number of negative triplets per triplet
 - `--best`: use the provided checkpoints (only used for test.py)
 - `--no_write`: don't save the checkpoints (only used for train.py)
-
-Please refer to `my_parser.py` for the examples of the arguments.
