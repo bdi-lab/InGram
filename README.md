@@ -1,14 +1,22 @@
 # InGram: Inductive Knowledge Graph Embedding via Relation Graphs
+This code is the official implementation of the following <a href="https://arxiv.org/abs/2305.19987" target="_blank"> paper </a>:
+This code is the official implementation of the following [paper](https://arxiv.org/abs/2305.19987):
 
-This code is the official implementation of the paper, "InGram: Inductive Knowledge Graph Embedding via Relation Graphs (ICML 2023)".
+> Jaejun Lee, Chanyoung Chung and Joyce Jiyoung Whang, InGram: Inductive Knowledge Graph Embedding via Relation Graphs, To appear in 40th International Conference on Machine Learning (ICML), 2023.
 
 Codes written by Jaejun Lee (jjlee98@kaist.ac.kr).
 
 If you use this code or data, please cite our paper.
 
-The bibtex is provided at the end of this file.
-
-> Jaejun Lee, Chanyoung Chung and Joyce Jiyoung Whang, InGram: Inductive Knowledge Graph Embedding via Relation Graphs, To appear in 40th International Conference on Machine Learning (ICML 2023), 2023.
+```bibtex
+@article{ingram,
+  author={Jaejun Lee and Chanyoung Chung and Joyce Jiyoung Whang},
+  title={{I}n{G}ram: Inductive Knowledge Graph Embedding via Relation Graphs},
+  year={2023},
+  journal={arXiv preprint arXiv:2305.19987},
+  doi = {10.48550/arXiv.2305.19987}
+}
+```
 
 ## Requirements
 
@@ -22,31 +30,29 @@ pip install -r requirements.txt
 
 ## Reproducing Results
 
-We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti and NVIDIA GeForce RTX 3090 for all our experiments.
+We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti,and NVIDIA GeForce RTX 3090 for all our experiments.
 
-We provide checkpoints for the inductive link prediction results in Table 1 and 3.
+We provide the checkpoints we used to produce the inductive link prediction results on 14 datasets.
 
-You can download the checkpoints in https://drive.google.com/file/d/1aZrx2dYNPT7j4TGVBOGqHMdHRwFUBqx5/view?usp=sharing
+You can download the checkpoints in https://drive.google.com/file/d/1aZrx2dYNPT7j4TGVBOGqHMdHRwFUBqx5/view?usp=sharing.
 
-For usage, place the unzipped checkpoint folder in the same directory with the codes.
+For usage, place the unzipped ckpt folder in the same directory with the codes.
 
-The commands we used to get the results in our paper using the provided checkpoints:
+The commands to reproduce the results in our paper:
 
 ```python
 python3 test.py --best --data_name [dataset_name]
 ```
 
-We provide the checkpoints for all datasets in our paper.
+## Training from Scratch
 
+To train InGram from scratch, run `train.py` with arguments.
 
-## Training new datasets
+Please tune our model in your machine in the range provided in Appendix C, because the best hyperparameters may be different due to randomness.\
+However, as mentioned in the paper, it is fine to fix $B$ to 10.
 
-To train InGram on new datasets, run `train.py` with arguments.
-
-We suggest you to use the provided checkpoints, or to tune our model from scratch in your machine in the range provided in our paper's Appendix for further usage, because the best hyperparameters may be different due to randomness.
-
-The list of arguments and their brief descriptions:\
---data_name: name of the dataset. Ex. NL-100, WK-75\
+The list of arguments of `train.py` and their brief descriptions:\
+--data_name: name of the dataset.\
 --exp: experiment name\
 -m, --margin: $\gamma$\
 -lr, --learning_rate: learning rate. Ex. 1e-3\
@@ -65,19 +71,4 @@ The list of arguments and their brief descriptions:\
 --best: use the provided checkpoints (only used for test.py)\
 --no_write: don't save the checkpoints (only used for train.py)
 
-Refer to our paper for notations.
-
-## Citation
-
-If you use this code or data, please cite our paper.
-
-```bibtex
-@inproceedings{ingram,
-  author={Jaejun Lee and Chanyoung Chung and Joyce Jiyoung Whang},
-  title={InGram: Inductive Knowledge Graph Embedding via Relation Graphs},
-  year={2023},
-  booktitle={arXiv preprint},
-  doi = {},
-  pages={}
-}
-```
+Please refer to `my_parser.py` for the examples of the arguments.
