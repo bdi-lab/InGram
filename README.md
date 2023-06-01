@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 We used NVIDIA RTX A6000, NVIDIA GeForce RTX 2080 Ti, and NVIDIA GeForce RTX 3090 for all our experiments. We provide the checkpoints we used to produce the inductive link prediction results on 14 datasets. If you want to use the checkpoints, place the unzipped ckpt folder in the same directory with the codes.
 
-You can download the checkpoints in https://drive.google.com/file/d/1aZrx2dYNPT7j4TGVBOGqHMdHRwFUBqx5/view?usp=sharing.
+You can download the checkpoints from https://drive.google.com/file/d/1aZrx2dYNPT7j4TGVBOGqHMdHRwFUBqx5/view?usp=sharing.
 
 The commands to reproduce the results in our paper:
 
@@ -41,7 +41,7 @@ python3 test.py --best --data_name [dataset_name]
 
 To train InGram from scratch, run `train.py` with arguments.
 
-Please tune our model in your machine in the range provided in Appendix C, because the best hyperparameters may be different due to randomness.
+Please tune the hyperparameters of our model using the range provided in Appendix C of the paper because the best hyperparameters may be different due to randomness.
 
 The list of arguments of `train.py` and their brief descriptions:
 - `--data_name`: name of the dataset
