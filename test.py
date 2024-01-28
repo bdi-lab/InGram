@@ -31,7 +31,7 @@ if not args.best:
 				f"_bin_{args.num_bin}_total_{args.num_epoch}_every_{args.validation_epoch}" + \
 				f"_neg_{args.num_neg}_layer_{args.num_layer_ent}_{args.num_layer_rel}" + \
 				f"_hid_{args.hidden_dimension_ratio_entity}_{args.hidden_dimension_ratio_relation}" + \
-				f"_head_{args.num_head}_margin_{arg.margin}"
+				f"_head_{args.num_head}_margin_{args.margin}"
 
 d_e = args.dimension_entity
 d_r = args.dimension_relation
