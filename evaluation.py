@@ -16,14 +16,14 @@ def evaluate(my_model, target, epoch, init_emb_ent, init_emb_rel, relation_tripl
         for triplet in tqdm(sup):
             triplet = triplet.unsqueeze(dim = 0)
 
-            head_corrupt = triplet.repeat(target.num_ent, 3)
+            head_corrupt = triplet.repeat(target.num_ent, 1)
             head_corrupt[:,0] = torch.arange(end = target.num_ent)
             
             head_scores = my_model.score(emb_ent, emb_rel, head_corrupt)
             head_filters = target.filter_dict[('_', int(triplet[0,1].item()), int(triplet[0,2].item()))]
             head_rank = get_rank(triplet, head_scores, head_filters, target = 0)
 
-            tail_corrupt = triplet.repeat(target.num_ent, 3)
+            tail_corrupt = triplet.repeat(target.num_ent, 1)
             tail_corrupt[:,2] = torch.arange(end = target.num_ent)
 
             tail_scores = my_model.score(emb_ent, emb_rel, tail_corrupt)
