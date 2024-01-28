@@ -68,6 +68,5 @@ test_sup = torch.tensor(test_sup).cuda()
 test_msg = torch.tensor(test_msg).cuda()
 
 test_relation_triplets = torch.tensor(test_relation_triplets).cuda()
-test_emb_ent, test_emb_rel = my_model(test_init_emb_ent, test_init_emb_rel, test_msg, test_relation_triplets)
 
 evaluate(my_model, test, args.target_epoch-1, test_init_emb_ent, test_init_emb_rel, test_relation_triplets)
