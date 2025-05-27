@@ -60,3 +60,6 @@ The list of arguments of `train.py`:
 - `--num_neg`: number of negative triplets per triplet
 - `--best`: use the provided checkpoints (only used for test.py)
 - `--no_write`: don't save the checkpoints (only used for train.py)
+
+## License
+Our datasets and codes are released under the CC BY-NC-SA 4.0 license.
